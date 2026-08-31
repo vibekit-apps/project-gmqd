@@ -1,62 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Your app</title>
-<link rel="icon" href="https://vibekit.bot/public/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="https://vibekit.bot/public/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="https://vibekit.bot/public/favicon-16.png">
-<link rel="apple-touch-icon" href="https://vibekit.bot/public/apple-touch-icon.png">
-<link rel="stylesheet" href="/styles.css">
-</head>
-<body>
-<div class="wrap">
-  <div class="topbar">
-    <a href="https://vibekit.bot" class="wordmark"><img src="https://vibekit.bot/public/Group2.png" alt=""> VibeKit</a>
-    <div class="status"><span class="dot"></span>Your app is live</div>
-  </div>
-
-  <h1 id="app-name">Your app</h1>
-  <p class="lead">This is your starter. Open the chat with your AI agent and tell it what to build — the page updates as you go.</p>
-
-  <div class="cards">
-    <div class="card">
-      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-      <h3>Chat to customize</h3>
-      <p>Describe what you want. Your agent edits the code and redeploys automatically.</p>
-    </div>
-    <div class="card">
-      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-      <h3>Iterate fast</h3>
-      <p>Every change you ask for ships in seconds, with full source on GitHub.</p>
-    </div>
-    <div class="card">
-      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
-      <h3>Yours to keep</h3>
-      <p>The code is yours. Connect a custom domain or fork it whenever you like.</p>
-    </div>
-  </div>
-
-  <a class="cta" id="open-chat" href="https://app.vibekit.bot">Open chat
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-  </a>
-
-  <footer>
-    <span>Built with VibeKit</span>
-    <a href="https://vibekit.bot">vibekit.bot</a>
-  </footer>
-</div>
-
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Rally Coach</title><link rel="stylesheet" href="/styles.css"><script src="https://unpkg.com/lucide@latest"></script></head>
+<body><main class="app">
+<header><div><p class="eyebrow">RALLY COACH</p><h1>Ready to rally?</h1><p class="sub">Your next point starts here.</p></div><button class="avatar" aria-label="Profile"><i data-lucide="user-round"></i></button></header>
+<section class="hero"><div><p class="eyebrow">THIS WEEK</p><strong id="weekTime">3h 20m</strong><span>of <b id="goalText">4h</b> goal</span></div><div class="ring"><span id="progress">83%</span></div></section>
+<section class="streak"><div class="streak-icon"><i data-lucide="flame"></i></div><div><b id="streak">5 week streak</b><p>Hit your goal to keep it alive</p></div><button class="goal-btn" id="goalBtn">Edit goal</button></section>
+<section class="section-head"><div><p class="eyebrow">YOUR PROGRESS</p><h2>Rally Points</h2></div><button class="more">Details <i data-lucide="chevron-right"></i></button></section>
+<section class="stats"><article><span>WEEKLY</span><b id="weekly">420</b><small>+80 today</small></article><article><span>MONTHLY</span><b id="monthly">1,840</b><small>Top 18%</small></article><article><span>ALL TIME</span><b id="total">8,260</b><small>Rally on</small></article></section>
+<section class="section-head"><div><p class="eyebrow">KEEP BUILDING</p><h2>Skill levels</h2></div><button class="more">All skills <i data-lucide="chevron-right"></i></button></section>
+<section class="skill"><div class="skill-ball"><i data-lucide="circle-dot"></i></div><div class="skill-copy"><div><b>Forehand</b><span>Level <em id="level">4</em></span></div><div class="bar"><i id="xpBar"></i></div><small><strong id="xp">72</strong> / 100 XP to Level <span id="nextLevel">5</span></small></div></section>
+<button class="start" id="startBtn"><i data-lucide="play"></i><span>Start training</span><small>Forehand · 20 min</small></button>
+<div class="modal" id="modal" hidden><div class="sheet"><button class="close" id="closeBtn"><i data-lucide="x"></i></button><p class="eyebrow">TODAY'S SESSION</p><h2>Forehand rhythm</h2><p>20 minutes · Find clean contact and depth.</p><div class="timer">20:00</div><button class="finish" id="finishBtn">Complete session <i data-lucide="check"></i></button></div></div>
+</main><nav><button class="active"><i data-lucide="house"></i><span>Home</span></button><button><i data-lucide="dumbbell"></i><span>Train</span></button><button><i data-lucide="calendar-days"></i><span>Schedule</span></button><button><i data-lucide="trophy"></i><span>Ranks</span></button><button><i data-lucide="user-round"></i><span>Profile</span></button></nav>
 <script>
-  // Name the page after the subdomain it's served from, so this file stays
-  // static (no build step, no server templating).
-  var sub = location.hostname.split('.')[0];
-  if (sub && sub !== 'localhost') {
-    document.getElementById('app-name').textContent = sub;
-    document.title = sub;
-    document.getElementById('open-chat').href = 'https://app.vibekit.bot/app/' + sub;
-  }
-</script>
-</body>
-</html>
+const defaults={weekly:420,monthly:1840,total:8260,xp:72,minutes:200,goal:240,streak:5};let s=JSON.parse(localStorage.rallyCoach||'null')||defaults;const $=id=>document.getElementById(id),time=m=>`${Math.floor(m/60)}h ${m%60}m`;function render(){let pct=Math.min(100,Math.round(s.minutes/s.goal*100));$('weekTime').textContent=time(s.minutes);$('goalText').textContent=time(s.goal);$('progress').textContent=pct+'%';$('weekly').textContent=s.weekly.toLocaleString();$('monthly').textContent=s.monthly.toLocaleString();$('total').textContent=s.total.toLocaleString();let xp=s.xp%100||100;$('xp').textContent=xp;$('level').textContent=4+Math.floor(s.xp/100);$('nextLevel').textContent=5+Math.floor(s.xp/100);$('xpBar').style.width=xp+'%';$('streak').textContent=s.streak+' week streak';localStorage.rallyCoach=JSON.stringify(s)}$('startBtn').onclick=()=>{$('modal').hidden=false};$('closeBtn').onclick=()=>{$('modal').hidden=true};$('finishBtn').onclick=()=>{s.weekly+=80;s.monthly+=80;s.total+=80;s.xp+=25;s.minutes+=20;if(s.minutes>=s.goal)s.streak+=1;$('modal').hidden=true;render()};$('goalBtn').onclick=()=>{let g=prompt('Weekly goal in minutes',s.goal);if(g&&+g>=30){s.goal=+g;render()}};render();lucide.createIcons();
+</script></body></html>
